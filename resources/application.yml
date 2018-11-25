@@ -1,0 +1,43 @@
+my:
+  name: Tom
+  age: 12
+  sex: 1
+
+spring:
+  profiles: one
+  
+bname: beanone
+
+---
+my:
+  name: Jerry
+  age: 14
+  sex: 0
+spring: 
+  profiles: two
+  
+bname: beantwo
+
+---
+my:
+  name: Lucy
+  age: 11
+  sex: 0
+bname: beanthree
+
+management:
+  security:
+    enabled: false
+  port: 8088
+  context-path: /admin
+
+endpoints:
+  actuator:
+    enabled: true
+  shutdown:
+    enabled: true
+
+info:
+  app:
+    name: demo
+    version: 1.0.0
